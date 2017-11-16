@@ -1,0 +1,30 @@
+[user]
+	email = giovanni.boscarino@xenit.eu
+	name = giovanni
+[push]
+	default = simple
+[core]
+	autocrlf = true
+	editor = vim
+[diff]
+[difftool]
+	prompt = false
+[merge]
+[mergetool]
+	prompt = false
+[difftool "meld"]
+	cmd = meld \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = meld
+[alias]
+    lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lg = !"git lg1"
+    fl = !"git fetch ; git lg1"
+    #http://stackoverflow.com/questions/1057564/pretty-git-branch-graphs
+    pushf = push --force-with-lease
+    pushu = git push --set-upstream
+    reseth = reset --hard
+    d = difftool
+
+
