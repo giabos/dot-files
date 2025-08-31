@@ -1,0 +1,12 @@
+https://packages.debian.org/buster/firmware-brcm80211
+
+https://askubuntu.com/questions/1260846/wifi-not-working-on-lubuntu-20-04
+
+install of busenlabs on z83s
+
+1. install last busenlabs (with wired network)
+2. sudo apt install firmware-brcm80211
+3. cd /lib/firmware/brcm
+sudo wget https://github.com/armbian/firmware/raw/master/brcm/brcmfmac43430a0-sdio.txt
+sudo modprobe -r brcmfmac
+sudo modprobe brcmfmac
