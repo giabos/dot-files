@@ -877,6 +877,15 @@
   <applications>
     <application title="GreenBang-Installer">
       <maximized>yes</maximized>
+      <decor>no</decor>
+    </application>
+    <!-- https://openbox.org/help/Applications -->
+    <application class="*">
+       <decor>no</decor>
+    </application>
+    <application name="Firefox*">
+        <desktop>3</desktop>
+        <maximized>yes</maximized>
     </application>
     <!--
   # this is an example with comments through out. use these to make your

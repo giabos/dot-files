@@ -1,50 +1,17 @@
-" Basic Vim config for GreenBANG Project 
-" Added by MrGreen [mrgreen@archbang.org]
-syntax on
-set showmode
-set showcmd
-set modelines=0
-set autoindent
-set hlsearch
-set mouse=a
+#
+# ~/.bashrc
+#
 
-set number
-set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-syntax on
-colorscheme habamax
+export PATH="$PATH:$HOME/bin:$HOME/bin/GB_Scripts:$HOME/bin/node-v22.19.0-linux-x64"
 
-map <F8>  :w<cr> :!perl %<cr>
-map <F10> :w<cr> :!bb %<cr>
-map <F12> :w<cr> :!node %<cr>
+alias ls='ls --color=auto'
+alias ll='ls -l --color=auto'
+alias bbr='rlwrap bb repl'
 
-map <F2> :Files<cr>
-map <F3> :Buffers<cr>
+PS1='[\u@\h \W]\$ '
 
-" display pipe cursor in insert mode.
-let &t_SI = "\<esc>[5 q"
-let &t_SR = "\<esc>[5 q"
-let &t_EI = "\<esc>[2 q"
 
-au FileType c,cpp,clj,pl call rainbow#load()
-
-" https://github.com/junegunn/vim-plug 
-call plug#begin()
-
-    " List your plugins here
-    Plug 'tpope/vim-sensible'
-    " https://github.com/junegunn/fzf.vim
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-
-    " https://github.com/frazrepo/vim-rainbow
-    Plug 'frazrepo/vim-rainbow'
-
-    " Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline'
-
-call plug#end()
 
