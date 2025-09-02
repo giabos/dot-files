@@ -1,3 +1,14 @@
+# for arch installation:
+
+choose locale en-Us
+boot loader at /boot and use systemd one
+
+setxkbmap -layout be
+
+
+
+
+# for wifi install: 
 https://packages.debian.org/buster/firmware-brcm80211
 
 https://askubuntu.com/questions/1260846/wifi-not-working-on-lubuntu-20-04
